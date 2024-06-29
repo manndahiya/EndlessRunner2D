@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4940890033573004375}
-  m_Layer: 0
+  - component: {fileID: 7334825525998603855}
+  - component: {fileID: 465285802359732583}
+  m_Layer: 9
   m_Name: Enemy 3
-  m_TagString: Enemy
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +34,65 @@ Transform:
   - {fileID: 3282207949692880615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7334825525998603855
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6900355129848389052}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.016632318, y: -0.013062596}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 45, y: 45}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.80235386, y: 3.2291834}
+  m_EdgeRadius: 0
+--- !u!114 &465285802359732583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6900355129848389052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f0d3182e80236478c00aa9a01fbdc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 10
+  E_transform: {fileID: 4940890033573004375}
 --- !u!1 &8433762270636366009
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,7 +105,8 @@ GameObject:
   - component: {fileID: 2896618875564577962}
   - component: {fileID: 5142109000400589297}
   - component: {fileID: 8303188863460575419}
-  m_Layer: 0
+  - component: {fileID: 8437887202174502869}
+  m_Layer: 9
   m_Name: Square
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -105,8 +167,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1411932419
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayer: 6
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 0df6dc4b340acce4bb6c14d2bfad5971, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -125,12 +187,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8433762270636366009}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3f0d3182e80236478c00aa9a01fbdc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 10
   E_transform: {fileID: 3282207949692880615}
 --- !u!61 &8303188863460575419
 BoxCollider2D:
@@ -139,7 +201,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8433762270636366009}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -161,7 +223,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.040642023, y: -0.13812637}
@@ -177,3 +239,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.0529995, y: 40.38508}
   m_EdgeRadius: 0
+--- !u!114 &8437887202174502869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8433762270636366009}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6701260858d4534998a04a1f2d1731a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carScrollSpeed: 10
+  carMeshRenderer: {fileID: 2896618875564577962}
+  carTransform: {fileID: 3282207949692880615}

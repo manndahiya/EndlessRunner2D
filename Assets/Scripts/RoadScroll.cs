@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class RoadScroll : MonoBehaviour
 {
-    [SerializeField] float scrollSpeed = 0.1f;
-
-    public Renderer meshRenderer;
-  
-
    
+    
+    
+
+    public Renderer laneMeshRenderer;
+    PickupManager pickup;
+
+
+    private void Start()
+    {
+        laneMeshRenderer = GetComponent<Renderer>();
+        pickup = FindObjectOfType<PickupManager>();
+    }
+
     void Update()
     {
-        meshRenderer.material.mainTextureOffset += 
-            new Vector2(0, scrollSpeed * Time.deltaTime);
+
+        MoveMesh(pickup.laneCurrentSpeed);
+        
+    }
+
+
+    void MoveMesh(float speed)
+    {
+        laneMeshRenderer.material.mainTextureOffset += new Vector2(0, speed * Time.deltaTime);
     }
 }

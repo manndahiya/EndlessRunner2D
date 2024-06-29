@@ -6,17 +6,36 @@ TagManager:
   tags:
   - Enemy
   - Coins
+  - LanePlus
+  - LaneMinus
+  - Defense
+  - LaneFast
+  - LaneSlow
+  - Lanes
+  - Traffic
+  - Magnet
+  - PlayerBubble
+  - CoinDetector
+  - Enemy2
+  - Enemy3
+  - Enemy4
+  - Enemy5
+  - Enemy6
+  - Enemy7
+  - Enemy8
+  - Enemy9
+  - Enemy10
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - VFX
   - Water
   - UI
   - Roads
-  - 
-  - 
-  - 
+  - Coins
+  - Pickups
+  - Cars
   - 
   - 
   - 
@@ -48,6 +67,15 @@ TagManager:
     locked: 0
   - name: Road
     uniqueID: 135100315
+    locked: 0
+  - name: Coins
+    uniqueID: 3086100303
+    locked: 0
+  - name: Pickups
+    uniqueID: 1424901801
+    locked: 0
+  - name: Cars
+    uniqueID: 1201980359
     locked: 0
   - name: Player
     uniqueID: 2883034877
